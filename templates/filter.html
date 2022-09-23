@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Report</title>
+    <style>
+        .topright {
+          position: absolute;
+          top: 8px;
+          right: 16px;
+          font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+<b>{{rows}} Records Found</b>
+
+<table class="table table-striped custab" id="reporttable">
+    <thread>
+        <td><b>Date/Time</b></td>
+        <td><b>Product Code</b></td>
+        <td><b>Mac Address</b></td>
+        <td><b>Test Result</b></td>
+    </thread>
+    {% for row in db %}
+    <tr>
+        <td>{{row.date_time}}</td>
+        <td>{{row.product_code}}</td>
+        <td>{{row.mac_address}}</td>
+        <td>{{row.result}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<!--<button id="downloadexcel" class="topright">Export to Excel</button>-->
+
+</body>
+</html>
