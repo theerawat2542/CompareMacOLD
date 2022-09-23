@@ -19,6 +19,7 @@ product_code= ""
 mac_add= ""
 find=0
 result= ""
+t=""
 
 async def Scanner():
     global MACID
