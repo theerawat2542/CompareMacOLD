@@ -45,9 +45,9 @@
 }
 </script>
 </head>
-<body style="margin: 50px;">
+<body style="margin: 50px; background-color:#F4FBFD">
 
-<button type="button" class="topright" onclick="window.location.href='{{url_for('report')}}';">Report</button>
+<button type="button" class="topright" style="background-color:#2380A3; color:white;" onclick="window.location.href='{{url_for('report')}}';">Report</button>
 
 {% block content %}
 
@@ -69,6 +69,6 @@
 </table>
 
 {% endblock %}
-<button onclick="exportTableToExcel('tblData', 'current-data')">Export Table Data To Excel File</button>
+<button onclick="exportTableToExcel('tblData', 'current-data')" style="background-color:green; color:white;">Excel File</button>
 </body>
 </html>

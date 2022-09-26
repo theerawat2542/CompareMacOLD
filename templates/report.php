@@ -34,7 +34,7 @@ $(document).ready(function(){
 });
 </script>
 </head>
-<body>
+<body style="background-color:#F4FBFD;">
 <div class="container search-table">
             <div class="search-box">
                 <div class="row">
