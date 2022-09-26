@@ -69,6 +69,6 @@
 </table>
 
 {% endblock %}
-<button onclick="exportTableToExcel('tblData', 'report-data')">Export Table Data To Excel File</button>
+<button onclick="exportTableToExcel('tblData', 'current-data')">Export Table Data To Excel File</button>
 </body>
 </html>

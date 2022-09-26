@@ -64,7 +64,7 @@
     {% endfor %}
 </table>
 
-<button onclick="exportTableToExcel('tblData', 'members-data')">Export Table Data To Excel File</button>
+<button onclick="exportTableToExcel('tblData', 'report-data')">Export Table Data To Excel File</button>
 
 <!--<button id="downloadexcel" class="topright">Export to Excel</button>-->
 
