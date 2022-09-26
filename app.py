@@ -118,7 +118,7 @@ def ajaxlivesearch():
             numrows = int(cur.rowcount)
             db = cur.fetchall()
             print(numrows)
-    return jsonify({'htmlresponse': render_template('filter.html', db=db, rows=numrows)})
+    return jsonify({'htmlresponse': render_template('filter.php', db=db, rows=numrows)})
     
 if __name__=="__main__":
     app.run(debug=True)

@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Database</title>
-    <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-<style>
-.topright {
-  position: absolute;
-  top: 8px;
-  right: 16px;
-  font-size: 18px;
-}
-</style>
+    <title>Report</title>
+    <style>
+        .topright {
+          position: absolute;
+          top: 8px;
+          right: 16px;
+          font-size: 18px;
+        }
+    </style>
 <script>
     function exportTableToExcel(tableID, filename = ''){
     var downloadLink;
@@ -45,13 +43,11 @@
 }
 </script>
 </head>
-<body style="margin: 50px;">
+<body>
 
-<button type="button" class="topright" onclick="window.location.href='{{url_for('report')}}';">Report</button>
+<b>{{rows}} Records Found</b>
 
-{% block content %}
-
-<table class="table" id="tblData">
+<table class="table table-striped custab" id="tblData">
     <thread>
         <td><b>Date/Time</b></td>
         <td><b>Product Code</b></td>
@@ -60,15 +56,17 @@
     </thread>
     {% for row in db %}
     <tr>
-        <td>{{row[4]}}</td>
-        <td>{{row[1]}}</td>
-        <td>{{row[2]}}</td>
-        <td>{{row[3]}}</td>
+        <td>{{row.date_time}}</td>
+        <td>{{row.product_code}}</td>
+        <td>{{row.mac_address}}</td>
+        <td>{{row.result}}</td>
     </tr>
     {% endfor %}
 </table>
 
-{% endblock %}
-<button onclick="exportTableToExcel('tblData', 'report-data')">Export Table Data To Excel File</button>
+<button onclick="exportTableToExcel('tblData', 'members-data')">Export Table Data To Excel File</button>
+
+<!--<button id="downloadexcel" class="topright">Export to Excel</button>-->
+
 </body>
 </html>
